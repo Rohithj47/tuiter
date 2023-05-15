@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .form-group {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tuit Page</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="notifications.html">Notifications</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="bookmarks.html">Bookmarks</a></li>
+                    <li><a href="lists.html">Lists</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="tuit.html">Tuit</a></li>
+                    <li><a href="reply.html">Reply</a></li>
+                </ul>
+            </td>
+            <td>
+                <a href="navigation.html">Back</a> <br/>
+                <h1>Tuiter</h1>
+                <h2>Home</h2>
+                <img src="RohithJanardhan.jpeg" width="48" height="48">
+
+                <form id="tuit">
+                    <textarea placeholder="What's happening?" cols="30" rows="2"></textarea>
+                    <div class="form-group">
+                        <select id="who-can-reply">
+                            <option value="EVERYONE" selected>Everyone can reply</option>
+                            <option value="FOLLOWING">People you follow</option>
+                            <option value="MENTIONED">Only people you mention</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="file"/>
+                        <button type="submit">Tuit</button>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
