@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 function Labs() {
     return(
        <div>
+         <Nav />
          <Routes>
             <Route path="a3" element={<Assignment3/>}></Route>
             <Route path="a4" element={<Assignment4/>}></Route>

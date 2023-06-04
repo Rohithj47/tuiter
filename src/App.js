@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Labs from './labs';
 import HelloWorld from "./labs/a3/hello-world";
 import Tuiter from './tuiter';

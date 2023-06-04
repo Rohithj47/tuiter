@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialTodos = [
  { _id: "123", do: "Accelerate the world's transition to sustainable energy", done: false },
- { _id: "234", do: "Reduce space transportation costs to become a spacefaring civilization", done: false },
+ { _id: "234", do: "Reduce space transportation costs to become a spacefaring civilization", done: true },
 ];
 const todosSlice = createSlice({
  name: 'todos',
@@ -21,8 +21,12 @@ const todosSlice = createSlice({
         if (indx !== -1) {
             state.splice(indx, 1)
         }
+    },
+    todoDoneToggle(state, action) {
+        const item = state.find(todo => todo._id === action.payload._id)
+        item.done = !item.done
     }
  }
 });
-export const {addTodo, removeTodo} = todosSlice.actions
+export const {addTodo, removeTodo, todoDoneToggle} = todosSlice.actions
 export default todosSlice.reducer
