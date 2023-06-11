@@ -7,8 +7,15 @@ const TuitsList = () => {
  const {tuits, loading} = useSelector(state => state.fullTuits)
  const dispatch = useDispatch()
 
+
+
  useEffect(() => {
+    console.log('Component rendered');
+
     dispatch(findTuitsThunk())
+    return () => {
+      console.log('Component unmounted');
+    };
  }, [])
  return(
    <ul className="list-group">

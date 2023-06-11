@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { AiOutlinePicture } from 'react-icons/ai';
-// import { HiOutlineGif } from 'react-icons/hi';
 import { MdFormatListBulleted } from 'react-icons/md';
 import { BsEmojiSmile } from 'react-icons/bs';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
@@ -23,6 +22,7 @@ const WhatsHappening = () => {
     replies:0,
     retuits: 0,
     likes: 0,
+    dislikes: 0,
     handle: "@nasa.usa" 
   }
    dispatch(createTuitThunk(newTuit))

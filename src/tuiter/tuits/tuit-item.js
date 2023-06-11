@@ -39,9 +39,11 @@ const TuitItem = (
                     />
                 </div>
                 <div className="col-11">
-                    <i className="bi bi-x-lg float-end"
-                        onClick={() => deleteTuitHandler(tuit._id)}>
-                    </i>
+                    <button className="float-end" style={{ background: 'none', border: 'none' }}>
+                        <i className="bi bi-x-lg float-end"
+                            onClick={() => deleteTuitHandler(tuit._id)}>
+                        </i>
+                    </button>
                     <div className="d-flex">
                         <p className="d-inline-block fw-bold">{tuit.userName}</p>
                         <div className="d-inline-block mx-1 mt-1">
