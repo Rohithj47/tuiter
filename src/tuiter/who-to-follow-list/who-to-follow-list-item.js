@@ -11,7 +11,6 @@ const WhoToFollowListItem = (
         <li className="list-group-item">
             <div className="row">
                 <div className="col-2">
-                    {console.log(`/images/${who.imgSrc}`)}
                     <img src={`/images/${who.imgSrc}`} height={48} width={40} className="rounded-circle" />
                 </div>
                 <div className="col-7">

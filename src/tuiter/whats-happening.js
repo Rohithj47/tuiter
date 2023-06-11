@@ -6,7 +6,7 @@ import { BsEmojiSmile } from 'react-icons/bs';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { BiBold } from 'react-icons/bi';
 import { BiItalic } from 'react-icons/bi';
-import { addTuit } from "./reducers/home-tuits-reducer";
+import { createTuitThunk } from "./services/tuits-thunks";
 import { useDispatch } from "react-redux";
 
 const WhatsHappening = () => {
@@ -14,7 +14,18 @@ const WhatsHappening = () => {
  const dispatch = useDispatch()
 
  const tuitClickHandler = () => {
-   dispatch(addTuit(whatsHappening))
+  const newTuit = {
+    tuit: whatsHappening, 
+    userName: "Nasa",
+    time: "1m", 
+    image: "nasa.png",
+    liked: false,
+    replies:0,
+    retuits: 0,
+    likes: 0,
+    handle: "@nasa.usa" 
+  }
+   dispatch(createTuitThunk(newTuit))
  }
  return (
    <div className="row">
