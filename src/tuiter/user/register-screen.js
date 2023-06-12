@@ -13,12 +13,13 @@ const RegisterScreen = () => {
 
     const handleRegistration = () => {
         try {
-            dispatch(registerThunk({
+            const data = {
                 username: username,
                 password: password,
                 firstName: firstName,
                 lastName: lastName
-            }))
+            }
+            dispatch(registerThunk(data))
             navigate("/tuiter/profile")
         } catch (e) {
             alert(e)

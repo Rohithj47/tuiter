@@ -10,23 +10,15 @@ function ProfileScreen() {
  const [ profile, setProfile ] = useState(currentUser);
  const dispatch = useDispatch();
  const navigate = useNavigate();
+
+
  const save = async () => { 
-  console.log(profile)
   await dispatch(updateUserThunk(profile));
  }
-
-  // useEffect(() => {
-  //   const loadProfile = async () => {
-  //     const { payload } = await dispatch(profileThunk());
-  //     setProfile(payload);
-  //   };
-  //   loadProfile();
-  // }, []);
 
   useEffect(() => {
     async function fetchData() {
       const { payload } = await dispatch(profileThunk());
-      console.log(payload)
       setProfile(payload);
     }
     fetchData();
