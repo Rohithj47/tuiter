@@ -16,6 +16,11 @@ function ProfileScreen() {
   await dispatch(updateUserThunk(profile));
  }
 
+ const handleLogout = () => {
+  dispatch(logoutThunk());
+  navigate("/tuiter/login")
+ }
+
   useEffect(() => {
     async function fetchData() {
       const { payload } = await dispatch(profileThunk());
@@ -52,10 +57,7 @@ function ProfileScreen() {
      </div></div>
    )}
    <button
-    onClick={() => {
-      dispatch(logoutThunk());
-      navigate("login");
-    }}>                   Logout</button>
+    onClick={handleLogout}>  Logout</button>
    <button onClick={save}>Save  </button>
 </div>
   ); 

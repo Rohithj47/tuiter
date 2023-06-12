@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loginThunk, logoutThunk, profileThunk, registerThunk, updateUserThunk } from "../services/auth-thunk";
+import { updateTuitThunk, loginThunk, logoutThunk, profileThunk, registerThunk, updateUserThunk } from "../services/auth-thunk";
 
 const authSlice = createSlice({
     name: "auth",
@@ -23,7 +23,14 @@ const authSlice = createSlice({
         [registerThunk.fulfilled]:
             (state, { payload }) => {
                 state.currentUser = payload
+            },
+        [updateTuitThunk.fulfilled]:
+            (state, { payload }) => {
+                state.loading = false
+                const tuitNdx = state.tuits.findIndex((t) => t._id === payload._id)
+                state.tuits[tuitNdx] = { ...state.tuits[tuitNdx], ...payload }
             }
+          
     }
 })
 
