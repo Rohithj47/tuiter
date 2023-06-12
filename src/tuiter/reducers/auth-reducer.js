@@ -23,14 +23,7 @@ const authSlice = createSlice({
         [registerThunk.fulfilled]:
             (state, { payload }) => {
                 state.currentUser = payload
-            },
-        [updateTuitThunk.fulfilled]:
-            (state, { payload }) => {
-                state.loading = false
-                const tuitNdx = state.tuits.findIndex((t) => t._id === payload._id)
-                state.tuits[tuitNdx] = { ...state.tuits[tuitNdx], ...payload }
             }
-          
     }
 })
 
