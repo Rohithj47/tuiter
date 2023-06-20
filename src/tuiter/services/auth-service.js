@@ -4,7 +4,7 @@ const USERS_URL = SERVER_API_URL? `${SERVER_API_URL}/users`
                                 : `https://tuiter-backend.onrender.com/api/users`;
 
 
-
+console.log(USERS_URL)
 const api = axios.create({ withCredentials: true });
 
 
